@@ -15,6 +15,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/about', function () {
+    return "ABOUT";
+});
+
+Route::get('/contact', function () {
+    return "CONTACT";
+});
+
+Route::get('post/{id}', function ($id) {
+    return "This is post number " . $id;
+});
+
 Route::group(['middleware' => ['web']], function () {
     
 });
