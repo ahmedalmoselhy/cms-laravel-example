@@ -31,4 +31,4 @@ Route::group(['middleware' => ['web']], function () {
     
 });
 
-Route::get('/post', 'PostsController@index');
+Route::get('/post/{name}/{id}/', 'PostsController@index');
