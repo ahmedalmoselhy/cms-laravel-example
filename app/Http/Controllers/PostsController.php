@@ -89,4 +89,13 @@ class PostsController extends Controller
     {
         return view('contact');
     }
+
+    public function show_post($id){
+        // METHOD 1
+        // return view('post')->with('id', $id);
+
+        // METHOD 2
+        return view('post', compact('id'));
+        // This method you're able to pass as many variables as you want
+    }
 }
