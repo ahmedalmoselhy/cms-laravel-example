@@ -13,10 +13,10 @@ class PostsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($name, $id)
+    public function index()
     {
         //
-        return $name . " is IN Index number " . $id;
+        return view('post');
     }
 
     /**
