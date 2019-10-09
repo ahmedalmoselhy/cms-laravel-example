@@ -38,3 +38,7 @@ Route::resource('/post', 'PostsController@index');
 Route::get('/contact', 'PostsController@contact');
 
 Route::get('/post/{id}', 'PostsController@show_post');
+
+Route::get('insert', function () {
+    DB::insert('insert into posts (title, body) values (?, ?)', ['post1', 'the quick brown fox jumps over the lazy dog']);
+});
