@@ -42,11 +42,11 @@ Route::get('/post/{id}', 'PostsController@show_post');
 
 // RAW SQL Queries
 Route::get('insert', function () {
-    DB::insert('insert into posts (title, body) values (?, ?)', ['post1', 'the quick brown fox jumps over the lazy dog']);
+    DB::insert('insert into posts (title, body) values ("post1", "the quick brown fox jumps over the lazy dog")');
 });
 
 Route::get('read', function () {
-    $res = DB::select('select * from posts where id = ?', [1]);
+    $res = DB::select('select * from posts where id = ?', [3]);
 
     foreach($res as $r){
         return $r->body;
